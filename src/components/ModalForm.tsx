@@ -12,10 +12,10 @@ type CandidatesInput = {
 };
 
 const config = {
-  bucketName: "btm-bucket-image",
-  region: "ap-southeast-1",
-  accessKeyId: "AKIAQFRQ33MUNUX2BFSG",
-  secretAccessKey: "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",
+  bucketName: `${process.env.NEXT_PUBLIC_BUCKETNAME}`,
+  region: `${process.env.NEXT_PUBLIC_REGION}`,
+  accessKeyId: `${process.env.NEXT_PUBLIC_ACCESSKEY}`,
+  secretAccessKey: `${process.env.NEXT_PUBLIC_SECRET_ACCESSKEY}`,
 };
 
 export default function ModalForm(props: {
