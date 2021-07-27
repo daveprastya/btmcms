@@ -21,7 +21,7 @@ export default function Layout(props: LayoutProps) {
         />
         <link href="https://cdn.jsdelivr.net/npm/@tailwindcss/custom-forms@0.2.1/dist/custom-forms.css" rel="stylesheet"></link>
       </Head>
-      <div className="overflow-hidden">
+      <div>
         {props.children}
       </div>
     </>
