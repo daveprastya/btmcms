@@ -236,7 +236,6 @@ function useBtm(): BtmValue {
         }
       );
       await getCandidates();
-      console.log(request.json(), "response delete");
     } catch (error) {
       console.log(error, "error");
     }
@@ -261,7 +260,6 @@ function useBtm(): BtmValue {
         }
       );
       await getCandidates();
-      console.log(request.json(), "response edit");
     } catch (error) {
       console.log(error, "error");
     }

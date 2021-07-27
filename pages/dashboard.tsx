@@ -2,22 +2,11 @@ import React from "react";
 import { Navbar } from "../src/components";
 import { useBtmContext } from "../src/BtmContext";
 import { Candidates, Layout, Categories } from "../src/components";
-import { useRouter } from "next/router";
-import swal from "sweetalert";
 
 export default function Dashboard() {
   const btmContext = useBtmContext();
-  const router = useRouter();
   const navigation = btmContext.navigation;
-
-  // React.useEffect(() => {
-  //   if (!btmContext.isLogin) {
-  //     swal("Please Login First!!", { icon: "warning" }).then((data) => {
-  //       router.push("/");
-  //     });
-  //   }
-  // });
-
+  
   return (
     <Layout title="Dashboard">
       {btmContext.isLogin ? (
@@ -37,7 +26,9 @@ export default function Dashboard() {
         <>
           <div className="bg-wardah-primary relative flex justify-center items-center h-screen">
             <div className="rounded animate-spin ease duration-300 w-5 h-5 border-2 border-white"></div>
-            <p className="ml-5 text-white text-xl font-bold">Please Login First!</p>
+            <p className="ml-5 text-white text-xl font-bold">
+              Please Login First!
+            </p>
           </div>
         </>
       )}

@@ -98,7 +98,7 @@ export default function ModalForm(props: {
   };
 
   return (
-    <div className="absolute inset-0 flex justify-center items-center bg-gray-200 bg-opacity-50 antialiased w-screen h-screen">
+    <div className="fixed inset-0 flex justify-center items-center bg-gray-200 bg-opacity-50 antialiased w-screen h-full overflow-y-auto">
       <div className="flex flex-col w-11/12 sm:w-5/6 lg:w-1/2 max-w-2xl mx-auto rounded-lg border border-gray-300 shadow-xl mt-auto">
         <div className="flex flex-row justify-between p-6 bg-white border-b border-gray-200 rounded-tl-lg rounded-tr-lg">
           <p className="font-bold text-gray-800 text-2xl">
