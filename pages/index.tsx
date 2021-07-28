@@ -33,7 +33,7 @@ export default function Login() {
       username: input.username,
       password: input.password,
     });
-    if (localStorage.getItem(`${process.env.NEXT_PUBLIC_LOCALSTORAGE}`))
+    if (localStorage.getItem(`${process.env.NEXT_PUBLIC_LOCALSTORAGE}`) && btmContext.isLogin)
      await router.push("/dashboard");
   };
 
