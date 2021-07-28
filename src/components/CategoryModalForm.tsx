@@ -39,11 +39,11 @@ export default function CategoryModalForms(props: {
   }, [props.id]);
 
   return (
-    <div className="flex absolute inset-0 justify-center items-center bg-gray-200 bg-opacity-50 antialiased w-screen h-screen">
+    <div className="flex fixed inset-0 justify-center items-center bg-gray-200 bg-opacity-50 antialiased w-screen h-screen">
       <div className="w-11/12 sm:w-5/6 lg:w-1/2 max-w-2xl rounded-lg border border-gray-300 shadow-xl self">
         <div className="flex flex-row justify-between p-6 bg-white border-b border-gray-200 rounded-tl-lg rounded-tr-lg">
           <p className="font-bold text-gray-800 text-2xl">
-            {props.title} Candidate
+            {props.title} Category
           </p>
           <button
             onClick={() =>
