@@ -311,12 +311,15 @@ function useBtm(): BtmValue {
     }
   };
 
-  React.useEffect(async () => {
-    if (localStorage.getItem(`${process.env.NEXT_PUBLIC_LOCALSTORAGE}`)) {
-      await setState((prevState) => ({ ...prevState, isLogin: true }));
-      await getCategories();
-      await getCandidates();
+  React.useEffect(() => {
+    async function checkLogin () {
+      if (localStorage.getItem(`${process.env.NEXT_PUBLIC_LOCALSTORAGE}`)) {
+        await setState((prevState) => ({ ...prevState, isLogin: true }));
+        await getCategories();
+        await getCandidates();
+      }
     }
+    checkLogin()
   }, []);
 
   return {
