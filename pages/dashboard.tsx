@@ -2,11 +2,24 @@ import React from "react";
 import { Navbar } from "../src/components";
 import { useBtmContext } from "../src/BtmContext";
 import { Candidates, Layout, Categories } from "../src/components";
+import { useRouter } from "next/router";
 
 export default function Dashboard() {
   const btmContext = useBtmContext();
   const navigation = btmContext.navigation;
-  
+  const router = useRouter();
+
+  React.useEffect(() => {
+    if (
+      !btmContext.isLogin &&
+      !localStorage.getItem(`${process.env.NEXT_PUBLIC_LOCALSTORAGE}`)
+    ) {
+      setTimeout(() => {
+        router.push("/");
+      }, 5000);
+    }
+  }, [btmContext.isLogin]);
+
   return (
     <Layout title="Dashboard">
       {btmContext.isLogin ? (
