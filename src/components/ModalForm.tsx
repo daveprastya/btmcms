@@ -148,7 +148,6 @@ export default function ModalForm(props: {
               name="description"
               placeholder="Type description..."
               className="p-5 mb-5 bg-white border border-gray-200 rounded shadow-sm h-24"
-              maxLength={100}
               required
               value={state.description}
               onChange={(e) =>
